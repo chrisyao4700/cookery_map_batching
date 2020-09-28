@@ -2,7 +2,7 @@ var eclairjs = require('eclairjs');
 
 var spark = new eclairjs();
 
-var sc = new spark.SparkContext("local[*]", "Simple Word Count");
+var sc = new spark.SparkContext("local[*]", "Simple Word Count"); // sc means spark context i guess
 
 var textFile = sc.textFile('foo.txt');
 
