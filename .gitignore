@@ -70,7 +70,6 @@ typings/
 # that annoying mac thing
 .DS_Store
 # ingore client name 
+docs/
 
-
-# ignore docs
-docs
+tests/

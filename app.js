@@ -4,7 +4,7 @@ var spark = new eclairjs();
 
 var sc = new spark.SparkContext("local[*]", "Simple Word Count"); // sc means spark context i guess
 
-var textFile = sc.textFile('foo.txt');
+var textFile = sc.textFile('s3a://arn:aws:s3:::chris-email-domain');
 
 var words = textFile.flatMap(function (sentence) {
     return sentence.split(" ");

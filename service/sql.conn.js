@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 const pool = mysql.createPool({
-    connectionLimit: 10,
-    host: process.env.VENUS_HOST,
-    user: process.env.VENUS_USER,
-    password: process.env.VENUS_PASS,
-    database: 'haimens_core'
+    connectionLimit: 120,
+    host: process.env.CM_HOST,
+    user: process.env.CM_USER,
+    password: process.env.CM_PASS,
+    database: 'cmdb'
 });
 
 const performQuery = (query) => {
