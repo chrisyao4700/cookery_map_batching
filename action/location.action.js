@@ -38,6 +38,22 @@ class CMLocationAction {
         }
     }
 
+    static async addStarToLocation(location) {
+        try {
+            const {stars: score, business_id} = location;
+
+            const locationIns = new CMLocation();
+
+            const location_id = await locationIns.updateScoreWithIdentifier(business_id, score);
+
+            return {location_id, score};
+
+        } catch (e) {
+            console.log(e);
+            console.log(location);
+        }
+    }
+
 }
 
 module.exports = CMLocationAction;

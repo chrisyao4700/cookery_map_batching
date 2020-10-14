@@ -108,7 +108,7 @@ const main = (async () => {
                     }
                 });
             });
-        }
+        };
         eachLine('docs/yelp_academic_dataset_business.json', function (line) {
             const item = JSON.parse(line);
             // console.log(item);
